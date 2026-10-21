@@ -1,0 +1,178 @@
+:root {
+    --bg: black;
+    --panel: #191919;
+    --text: #d8d8d8;
+    --grey: #8a8a8a;
+    --font: Helvetica;
+    --display: Helvetica;
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background: var(--bg);
+    color: var(--text);
+    font-family: var(--font);
+}
+.container {
+    display: flex;
+    flex: 1;
+    align-items: flex-start;
+}
+
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: 220px;
+    flex-shrink: 0;
+    height: 100vh;
+    background: var(--panel);
+    padding: 24px 0;
+    border-right: 1px solid #262626;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-link {
+    padding: 0 20px 24px;
+}
+
+.loggan {
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+    border-radius: 6px;
+}
+
+.kapitellänkar {
+    display: block;
+    padding: 10px 20px;
+    color: var(--text);
+    text-decoration: none;
+    border-left: 3px solid transparent;
+}
+
+.kapitellänkar:hover,
+.kapitellänkar.active {
+    background: rgba(255, 255, 255, 0.05);
+    padding-left: 25px;
+    color: white;
+}
+
+a:focus-visible {
+    outline: 2px solid white;
+    outline-offset: 2px;
+}
+
+main {
+    flex: 1;
+    min-width: 0;
+    padding: 0 5rem 6rem;
+}
+
+.hero {
+    padding: 4rem 0 4rem;
+    margin-bottom: 1rem;
+    border-bottom: 1px solid #262626;
+}
+
+h1 {
+    font-family: var(--display);
+    font-size: clamp(2.8rem, 8vw, 5.5rem);
+    line-height: 1.05;
+    color: white;
+}
+h3 {
+    color: rgb(125, 125, 125);
+
+    font-size: 16px;
+    margin-left: 0;
+}
+
+.author {
+    margin-top: 1rem;
+    font-style: italic;
+    color: var(--grey);
+    font-size: 1.2rem;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+article p {
+    max-width: 65ch;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    color: var(--text);
+}
+
+article p:first-of-type::first-letter {
+    float: left;
+    font-family: var(--display);
+    font-size: 4.2rem;
+    line-height: 0.8;
+    padding: 6px 10px 0 0;
+    color: white;
+}
+footer {
+    width: 100%;
+    padding: 16px 24px;
+    background: var(--panel);
+    border-top: 1px solid #262626;
+}
+footer > a {
+    color: white;
+}
+@media (max-width: 700px) {
+    .container {
+        flex-direction: column;
+    }
+    .sidebar {
+        position: static;
+        width: 100%;
+        height: auto;
+        padding: 16px;
+        border-right: none;
+        border-bottom: 1px solid #262626;
+    }
+
+    nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 6px;
+        align-items: center;
+    }
+
+    .logo-link {
+        padding: 0 12px 0 0;
+    }
+    .loggan {
+        height: 49px;
+    }
+    .kapitellänkar {
+        padding: 6px 10px;
+        font-size: 0.9rem;
+    }
+
+    .kapitellänkar:hover,
+    .kapitellänkar.active {
+        padding-left: 10px;
+
+    }
+    main {
+        padding: 0 1.5rem 4rem;
+    }
+    .hero {
+        padding-top: 3rem;
+    }
+}

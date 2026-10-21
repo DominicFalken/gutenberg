@@ -1,0 +1,32 @@
+*{
+    --font: Helvetica;
+    margin: 0px;
+    padding: 0px;
+    --bg: #1f1f1f;
+    background-color: var(--bg);
+
+}
+h1 {
+    color: white;
+    font-size: 70px;
+    margin: 0 0 0 5rem;
+    font: var(--font-);
+}
+p {
+    max-width: 60ch;
+    color: lightgray;  
+    font: var(--font-);
+}
+.container {
+    margin: 3rem;
+    flex: 1;
+    align-items: flex-start;
+}
+button {
+    color: white;
+}
+@media (max-width: 700px){
+    h1{
+        color: cyan;
+    }
+}

@@ -1,0 +1,77 @@
+*{
+    font-family: Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+h1 {
+    font-size: 80px;
+    width: 100%;
+    height: 100%;
+    color: white;
+    margin: 40px 0 50px 30px
+}
+.container {
+    width: 100%;
+    display: grid;
+    grid-template-areas: "sidebar main";
+    grid-template-columns: 200px auto;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.kapitellänkar {
+    padding: 5px;  
+}
+article p:first-of-type::first-letter {
+    float: left;
+    font-size: 4rem;
+    line-height: 0.8;
+    padding-right: 10px;
+    color: var(--accent);
+}
+
+.loggan {
+    height: 100px;
+}
+.sidebar {
+    position: sticky;
+    top: 0;
+    width: 200px;
+    background: #111;
+    padding: 20px;
+    grid-area: sidebar;
+    height: 100vw;
+    background-color: white;
+
+    justify-content: center;
+    display: block;
+}
+.stickycover {
+    position: sticky;
+    scale: 75%;
+    top: 0;
+    
+
+
+}
+footer {
+    width: 100%;
+    position: absolute;
+    background-color: red;
+}
+footer>a {
+    color: cyan;
+}
+main {
+    grid-area: main;
+    height: 100vw;
+    background-color: black;
+}
+.textdåförihelahelvetet {   
+    color: lightgray;
+    margin: 0 5rem 0 5rem;
+    line-height: 150%;
+    max-width: 65ch;
+}
+
+
